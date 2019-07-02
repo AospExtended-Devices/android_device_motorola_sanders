@@ -195,7 +195,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.mm.sta.enable=0 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.data_lte_sys_ind=1 \
+    service.qti.ims.enabled=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -210,7 +212,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true \
     persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent
+    persist.data.mode=concurrent \
+    persist.data.mode=concurrent \
+    persist.vendor.radio.snapshot_timer=22 \
+    persist.vendor.radio.snapshot_enabled=1 \
+    persist.radio.calls.on.ims=1 \
+    persist.radio.domain.ps=0 \
+    persist.rmnet.mux=enabled \
+    persist.radio.REVERSE_QMI=0 \
+    persist.sys.cnd.iwlan=1 \
+    persist.cne.logging.qxdm=3974 \
+    persist.vendor.ims.disableDebugLogs=1 \
+    persist.vendor.ims.disableQXDMLogs=1 \
+    DEVICE_PROVISIONED=1 \
+    persist.cne.feature=1
 
 # NITZ
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -248,6 +263,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
+    persist.vendor.radio.add_power_save=1 \
+    persist.vendor.dpm.feature=0 \
     persist.radio.apn_delay=5000 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.dfr_mode_set=1 \
